@@ -35,7 +35,7 @@ const images = {
 preloader(images);
 
 const theme = createTheme({
-  primary: "#CC4304" //#CC6B00" //"#CC2600" //"#CC6B00"
+  primary: "#CC4304" //"#CC4304" //#CC6B00" //"#CC2600" //"#CC6B00"
 }, {
   primary: "Montserrat",
   secondary: "Helvetica"
@@ -46,12 +46,18 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="secondary">
+          <Heading size={1} fit caps lineHeight={1} textColor="white">
             Foodie Finda
           </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
             For food explorers like us looking for a new eating adventure
           </Text>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="#692202" textColor="primary">
+          <BlockQuote>
+            <Quote>Pull up a chair. Take a taste. Come join us. Life is so endlessly delicious.</Quote>
+            <Cite>Ruth Reichl</Cite>
+          </BlockQuote>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="primary" caps>Typography</Heading>
