@@ -133,6 +133,8 @@ export default class Presentation extends React.Component {
           <Heading size={5} textColor="secondary">Select Different Categories</Heading>
           <br />
           <Heading size={5} textColor="secondary">Change Your Location</Heading>
+          <br />
+          <Heading size={5} textColor="secondary">Automatically Find Good Eats</Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="white">
           <BlockQuote>
@@ -140,7 +142,7 @@ export default class Presentation extends React.Component {
             <Cite textColor="#692202">Ruth Reichl</Cite>
           </BlockQuote>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="white">
+        <Slide transition={["appear"]} bgColor="white">
           <Image src={images.foodieLogo} width="950px"></Image>
           <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
             Randy Van - Rick Baker - Jonothan Mancia
