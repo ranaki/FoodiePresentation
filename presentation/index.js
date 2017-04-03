@@ -134,7 +134,7 @@ export default class Presentation extends React.Component {
           <br />
           <Heading size={5} textColor="secondary">Change Your Location</Heading>
           <br />
-          <Heading size={5} textColor="secondary">Automatically Find Good Eats</Heading>
+          <Heading size={5} textColor="secondary">Automagically Find Good Eats</Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="white">
           <BlockQuote>
