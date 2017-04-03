@@ -71,31 +71,36 @@ export default class Presentation extends React.Component {
               <TableItem>Mexican</TableItem>
               <TableItem>Afghan</TableItem>
               <TableItem>Barbeque</TableItem>
+            </TableRow>
+            <TableRow>
               <TableItem>Gastropubs</TableItem>
+              <TableItem>Asian Fusion</TableItem>
+              <TableItem>Sandwiches</TableItem>
             </TableRow>
             <TableRow>
               <TableItem>American</TableItem>
               <TableItem>Salad</TableItem>
               <TableItem>Japanese</TableItem>
-              <TableItem>Asian Fusion</TableItem>
             </TableRow>
             <TableRow>
               <TableItem>Hot Pot</TableItem>
               <TableItem>Vietnamese</TableItem>
               <TableItem>Vegan</TableItem>
-              <TableItem>Sandwiches</TableItem>
             </TableRow>
             <TableRow>
               <TableItem>Italian</TableItem>
               <TableItem>Wine Bars</TableItem>
               <TableItem>Tapas</TableItem>
-              <TableItem>Izakaya</TableItem>
             </TableRow>
             <TableRow>
               <TableItem>Cafes</TableItem>
               <TableItem>Breakfast</TableItem>
-              <TableItem>Sushi Bars</TableItem>
+              <TableItem>Sushi</TableItem>
+            </TableRow>
+            <TableRow>
               <TableItem>Ramen</TableItem>
+              <TableItem>Izakaya</TableItem>
+              <TableItem>Burgers</TableItem>
             </TableRow>
           </tbody>            
           </Table>
