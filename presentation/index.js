@@ -33,6 +33,7 @@ const images = {
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
   foodieLogo: require("../assets/FoodieFinder3.jpg"),
+  foodieLogoBlue: require("../assets/FoodieFindaBlueLogo.png"),
   joyLuck: require("../assets/JoyLuck.png"),
   ohMai: require("../assets/OhMai.png")
 };
@@ -51,7 +52,8 @@ export default class Presentation extends React.Component {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
         <Slide transition={["appear"]} bgColor="white">
-          <Heading size={3} textColor="primary">Meet The</Heading>
+          <hr/>
+          <Heading size={3} textColor="primary">Meet the</Heading>
           <Heading size={1} textColor="primary" caps>Team</Heading>
           <hr />
           <br />
@@ -61,8 +63,12 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["zoom"]} bgColor="white">
           <Image src={images.foodieLogo} width="950px"></Image>
+          <hr/>
           <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
-            For food explorers like us looking for a new eating adventure
+            For food explorers like us 
+          </Text>
+          <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
+            looking for a new eating adventure
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="white" textColor="primary">
@@ -189,6 +195,10 @@ export default class Presentation extends React.Component {
           <Image src={images.foodieLogo} width="950px"></Image>
           <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
             Randy Van - Rick Baker - Jonathan Mancia
+          </Text>
+          <hr/>
+          <Text margin="10px 0 0" textColor="#1565c0" size={5}>
+            https://foodie-finda.herokuapp.com
           </Text>
         </Slide>
       </Deck>
