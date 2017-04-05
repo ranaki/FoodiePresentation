@@ -50,6 +50,15 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+        <Slide transition={["appear"]} bgColor="white">
+          <Heading size={3} textColor="primary">Meet The</Heading>
+          <Heading size={1} textColor="primary" caps>Team</Heading>
+          <hr />
+          <br />
+          <Text margin="10px 0 0" textColor="#692202" size={3} fit bold>
+            Randy  -  Rick  -  Jonathan
+          </Text>
+        </Slide>
         <Slide transition={["zoom"]} bgColor="white">
           <Image src={images.foodieLogo} width="950px"></Image>
           <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
@@ -119,8 +128,7 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Image src={images.joyLuck} width="400px"></Image>
-          <Image src={images.ohMai} width="400px"></Image>
+          <Image src={images.joyLuck} width="800px"></Image>
           <Text margin="10px 0 0" textColor="white" size={1} fit bold>
             You have options
           </Text>
@@ -128,11 +136,11 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={5} textColor="primary" caps>Features</Heading>
           <hr />
-          <Heading size={5} textColor="secondary">Create Favorites List</Heading>
+          <Heading size={5} textColor="secondary">Favorites</Heading>
           <br />
-          <Heading size={5} textColor="secondary">Select Different Categories</Heading>
+          <Heading size={5} textColor="secondary">Categories</Heading>
           <br />
-          <Heading size={5} textColor="secondary">Change Your Location</Heading>
+          <Heading size={5} textColor="secondary">Location</Heading>
           <br />
           <Heading size={5} textColor="secondary">Automagically Find Good Eats</Heading>
         </Slide>
@@ -145,7 +153,7 @@ export default class Presentation extends React.Component {
         <Slide transition={["appear"]} bgColor="white">
           <Image src={images.foodieLogo} width="950px"></Image>
           <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
-            Randy Van - Rick Baker - Jonothan Mancia
+            Randy Van - Rick Baker - Jonathan Mancia
           </Text>
         </Slide>
       </Deck>
