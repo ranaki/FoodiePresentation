@@ -70,6 +70,13 @@ export default class Presentation extends React.Component {
             <Quote>Try something new today...</Quote>
           </BlockQuote>
         </Slide>
+        <Slide transition={["zoom"]} bgColor="white" textColor="primary">
+          <Heading size={1} textColor="#1565c0">Why?</Heading>
+          <br />
+          <hr />
+          <br />
+          <Heading size={1} textColor="#1565c0">Who?</Heading>
+        </Slide>
         <Slide transition={["fade"]} bgColor="#CC4304" textColor="white">
           <Heading size={6} textColor="white" caps>Choose From 40 Food Categories</Heading>
           <br />
@@ -134,15 +141,32 @@ export default class Presentation extends React.Component {
           </Text>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
-          <Heading size={5} textColor="primary" caps>Features</Heading>
+          <Heading size={1} textColor="primary" caps>Features</Heading>
           <hr />
-          <Heading size={5} textColor="secondary">Favorites</Heading>
           <br />
-          <Heading size={5} textColor="secondary">Categories</Heading>
+          <Heading size={4} textColor="#692202">Favorites</Heading>
           <br />
-          <Heading size={5} textColor="secondary">Location</Heading>
+          <Heading size={4} textColor="#692202">Categories</Heading>
           <br />
-          <Heading size={5} textColor="secondary">Automagically Find Good Eats</Heading>
+          <Heading size={4} textColor="#692202">Location</Heading>
+          <br />
+          <Heading size={5} textColor="#692202">Auto<span style={{color: '#CC4304'}}>magically</span> Find Good Eats</Heading>
+        </Slide>
+        <Slide transition={["zoom"]} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="#692202">
+            Coming Soon!
+          </Heading>
+          <hr />
+          <Heading size={4}  textColor="white">Locations</Heading>
+          <br />
+          <Heading size={4}  textColor="white">Reviews</Heading>
+          <br />
+          <Heading size={4}  textColor="white">More Categories</Heading>
+          <br />
+          <Heading size={4}  textColor="white">Full-size Photos</Heading>
+          <br />
+          <Heading size={4}  textColor="white">Share Favs with Foodies</Heading>
+          <hr />
         </Slide>
         <Slide transition={["fade"]} bgColor="white">
           <BlockQuote>
@@ -150,7 +174,18 @@ export default class Presentation extends React.Component {
             <Cite textColor="#692202">Ruth Reichl</Cite>
           </BlockQuote>
         </Slide>
+        <Slide transition={["zoom"]} bgColor="white" textColor="primary">
+          <Heading bgColor="#1565c0" size={3} textColor="white">Attention All Foodies</Heading>
+          <br />
+          <hr />
+          <br />
+          <Heading size={4} textColor="primary">Come visit our table...</Heading>
+          <Heading size={1} textColor="primary">it's delicious</Heading>
+        </Slide>
         <Slide transition={["appear"]} bgColor="white">
+          <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
+           Thank you!
+          </Text>
           <Image src={images.foodieLogo} width="950px"></Image>
           <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
             Randy Van - Rick Baker - Jonathan Mancia
