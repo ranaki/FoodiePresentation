@@ -13,7 +13,8 @@ import {
   Slide,
   Text,
   Image,
-  Table, TableRow, TableItem, TableHeaderItem
+  Table, TableRow, TableItem, TableHeaderItem,
+  Appear
 } from "spectacle";
 
 // Import image preloader util
@@ -34,8 +35,16 @@ const images = {
   markdown: require("../assets/markdown.png"),
   foodieLogo: require("../assets/FoodieFinder3.jpg"),
   foodieLogoBlue: require("../assets/FoodieFindaBlueLogo.png"),
+  mobileFoodie: require("../assets/mobileFoodie.png"),
   joyLuck: require("../assets/JoyLuck.png"),
-  ohMai: require("../assets/OhMai.png")
+  ohMai: require("../assets/OhMai.png"),
+  dpl: require("../assets/DevPoint-LD-Spring-2017.png"),
+  fancyBack: require("../assets/fancyPlace.jpg"),
+  foodieHome: require("../assets/foodieHome.png"),
+  rick: require("../assets/Rick.jpg"),
+  jonathan: require("../assets/Jonathan.jpg"),
+  randy: require("../assets/Randy.jpg")
+
 };
 
 preloader(images);
@@ -51,18 +60,18 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
-        <Slide transition={["appear"]} bgColor="white">
-          <hr/>
-          <Heading size={3} textColor="primary">Meet the</Heading>
+        <Slide transition={["appear"]} bgColor="white" bgImage={images.fancyBack} bgDarken={.7}>
           <Heading size={1} textColor="primary" caps>Team</Heading>
           <hr />
           <br />
-          <Text margin="10px 0 0" textColor="#692202" size={3} fit bold>
-            Randy  -  Rick  -  Jonathan
+          <Image src={images.rick} width={300}></Image><Image src={images.jonathan} width={300}></Image><Image src={images.randy} width={300}></Image>
+          <hr/>
+          <Text margin="10px 0 0" textColor="white" size={5} fit bold>
+            Rick  -  Jonathan - Randy
           </Text>
         </Slide>
         <Slide transition={["zoom"]} bgColor="white">
-          <Image src={images.foodieLogo} width="950px"></Image>
+          <Image src={images.foodieLogo} width="950px" style={{border: '10px solid #692202'}}></Image>
           <hr/>
           <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
             For food explorers like us 
@@ -82,6 +91,8 @@ export default class Presentation extends React.Component {
           <hr />
           <br />
           <Heading size={1} textColor="#1565c0">Who?</Heading>
+        </Slide>
+        <Slide transition={["appear"]} bgColor="primary" bgImage={images.foodieHome}>
         </Slide>
         <Slide transition={["fade"]} bgColor="#CC4304" textColor="white">
           <Heading size={6} textColor="white" caps>Choose From 40 Food Categories</Heading>
@@ -131,7 +142,7 @@ export default class Presentation extends React.Component {
           <Heading size={1} fit caps lineHeight={1} textColor="white">
             Give us a location:
           </Heading>
-          <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
+          <Text margin="10px 0 0" textColor="#4b1a02" size={1} fit bold>
             84190
           </Text>
         </Slide>
@@ -150,16 +161,21 @@ export default class Presentation extends React.Component {
           <Heading size={1} textColor="primary" caps>Features</Heading>
           <hr />
           <br />
-          <Heading size={4} textColor="#692202">Favorites</Heading>
+          <Appear><Heading size={4} textColor="#692202">Favorites</Heading></Appear>
           <br />
-          <Heading size={4} textColor="#692202">Categories</Heading>
+          <Appear><Heading size={4} textColor="#692202">Categories</Heading></Appear>
           <br />
-          <Heading size={4} textColor="#692202">Location</Heading>
+          <Appear><Heading size={4} textColor="#692202">Location</Heading></Appear>
           <br />
-          <Heading size={5} textColor="#692202">Auto<span style={{color: '#CC4304'}}>magically</span> Find Good Eats</Heading>
+          <Appear><Heading size={5} textColor="#692202">Auto<span style={{color: '#CC4304'}}>magically</span> Find Good Eats</Heading></Appear>
+        </Slide>
+        <Slide transition={["appear"]} bgColor="primary">
+          {/* <Image src={images.mobileFoodie} width="800px" style={{border: '10px solid black'}} fit></Image> */}
+          <Image src={images.mobileFoodie} width="700px"></Image>
+          <hr/>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit caps lineHeight={1} textColor="#692202">
+          <Heading size={1} fit caps lineHeight={1} textColor="#4b1a02">
             Coming Soon!
           </Heading>
           <hr />
@@ -186,20 +202,25 @@ export default class Presentation extends React.Component {
           <hr />
           <br />
           <Heading size={4} textColor="primary">Come visit our table...</Heading>
-          <Heading size={1} textColor="primary">it's delicious</Heading>
+          <Heading size={1} textColor="primary">Good Eats!</Heading>
+        </Slide>
+        <Slide transition={["appear"]} bgColor="white" bgImage={images.fancyBack} bgDarken={.7}>
+          <Image src={images.rick} width={300}></Image><Image src={images.jonathan} width={300}></Image><Image src={images.randy} width={300}></Image>
+          <hr/>
+          <Heading size={1} textColor="primary" caps>Team Foodie</Heading>
+          <hr />
+          <br />
+          <Text margin="10px 0 0" textColor="white" size={3} fit bold>
+            Rick  -  Jonathan - Randy
+          </Text>
         </Slide>
         <Slide transition={["appear"]} bgColor="white">
           <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
            Thank you!
           </Text>
-          <Image src={images.foodieLogo} width="950px"></Image>
-          <Text margin="10px 0 0" textColor="#692202" size={1} fit bold>
-            Randy Van - Rick Baker - Jonathan Mancia
-          </Text>
+          <Image src={images.foodieLogo} width="950px" style={{border: '2px solid #692202'}}></Image>
           <hr/>
-          <Text margin="10px 0 0" textColor="#1565c0" size={5}>
-            https://foodie-finda.herokuapp.com
-          </Text>
+          <Heading size={6} textColor="#1565c0">https://foodie-finda.herokuapp.com</Heading>
         </Slide>
       </Deck>
     );
