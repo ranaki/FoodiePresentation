@@ -43,7 +43,9 @@ const images = {
   foodieHome: require("../assets/foodieHome.png"),
   rick: require("../assets/Rick.jpg"),
   jonathan: require("../assets/Jonathan.jpg"),
-  randy: require("../assets/Randy.jpg")
+  randy: require("../assets/Randy.jpg"),
+  foodGif: require("../assets/Foodie2.gif"),
+  categoryGif: require("../assets/categories.gif")
 
 };
 
@@ -138,6 +140,12 @@ export default class Presentation extends React.Component {
           </tbody>            
           </Table>
         </Slide>
+        <Slide transition={["zoom"]} bgColor="white">
+          <Image src={images.categoryGif} width="900px" style={{border: '5px solid #692202'}}></Image>
+          <Text margin="10px 0 0" textColor="primary" size={5} bold>
+            Choosing Categories
+          </Text>
+        </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
           <Heading size={1} fit caps lineHeight={1} textColor="white">
             Give us a location:
@@ -152,7 +160,7 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
         <Slide transition={["zoom"]} bgColor="primary">
-          <Image src={images.joyLuck} width="800px"></Image>
+          <Image src={images.foodGif} width="700px"></Image>
           <Text margin="10px 0 0" textColor="white" size={1} fit bold>
             You have options
           </Text>
@@ -164,8 +172,6 @@ export default class Presentation extends React.Component {
           <Appear><Heading size={4} textColor="#692202">Favorites</Heading></Appear>
           <br />
           <Appear><Heading size={4} textColor="#692202">Categories</Heading></Appear>
-          <br />
-          <Appear><Heading size={4} textColor="#692202">Location</Heading></Appear>
           <br />
           <Appear><Heading size={5} textColor="#692202">Auto<span style={{color: '#CC4304'}}>magically</span> Find Good Eats</Heading></Appear>
         </Slide>
@@ -185,9 +191,8 @@ export default class Presentation extends React.Component {
           <br />
           <Heading size={4}  textColor="white">More Categories</Heading>
           <br />
-          <Heading size={4}  textColor="white">Full-size Photos</Heading>
-          <br />
           <Heading size={4}  textColor="white">Share Favs with Foodies</Heading>
+          <br />
           <hr />
         </Slide>
         <Slide transition={["fade"]} bgColor="white">
@@ -196,22 +201,22 @@ export default class Presentation extends React.Component {
             <Cite textColor="#692202">Ruth Reichl</Cite>
           </BlockQuote>
         </Slide>
-        <Slide transition={["zoom"]} bgColor="white" textColor="primary">
-          <Heading bgColor="#1565c0" size={3} textColor="white">Attention All Foodies</Heading>
+        <Slide transition={["zoom"]} bgColor="primary" textColor="primary">
+          <Heading bgColor="#4b1a02" size={3} textColor="white">Attention All Foodies</Heading>
           <br />
           <hr />
           <br />
-          <Heading size={4} textColor="primary">Come visit our table...</Heading>
-          <Heading size={1} textColor="primary">Good Eats!</Heading>
+          <Heading size={4} textColor="white">Come visit our table...</Heading>
+          <Heading size={1} bgColor="white" textColor="primary">Good Eats -></Heading>
         </Slide>
         <Slide transition={["appear"]} bgColor="white" bgImage={images.fancyBack} bgDarken={.7}>
+          <Heading size={1} textColor="primary" caps>Team &nbsp; Foodie</Heading>
+          <hr />
           <Image src={images.rick} width={300}></Image><Image src={images.jonathan} width={300}></Image><Image src={images.randy} width={300}></Image>
           <hr/>
-          <Heading size={1} textColor="primary" caps>Team Foodie</Heading>
-          <hr />
           <br />
           <Text margin="10px 0 0" textColor="white" size={3} fit bold>
-            Rick  -  Jonathan - Randy
+            Rick  -  Jonathan  -  Randy
           </Text>
         </Slide>
         <Slide transition={["appear"]} bgColor="white">
